@@ -41,7 +41,7 @@ class Game{
                 form.hide();
 
                 Player.getPlayerInfo();
-                 image(back_img1, 0, 0, 1000, 800);
+                 image(back_img, 0, 0, 1000, 800);
                  var x =100;
                  var y=200;
                  var index = 0;
@@ -114,13 +114,13 @@ class Game{
 
                         if(fruit.isTouching(player1)){
                             fruit.destroy();
-                            player.score = ++score1;
+                            player.score = player.score +1;
                             player.update();
                         }
 
                         if(fruit.isTouching(player2)){
                             fruit.destroy();
-                            player.score = ++score2;
+                            player.score = player.score +1;
                             player.update();
                         }
                     }
